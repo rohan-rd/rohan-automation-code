@@ -77,20 +77,7 @@ public class ReadMovieInfoTest {
 
 	}
 	
-//	@Test(description = "WIKI", groups = {"Smoke"}, testName = "TC-1.2",priority =2, enabled=false)
-//	public void wikiMovie() throws Exception {
-//		try {
-//			
-////			driver.get(properties.getProperty("wikiUrl"));
-////			helper.wikiSearchMovie(properties.getProperty("movieName"));
-//			
-//		}catch(Exception e){
-//			System.out.println(e.getMessage());
-//		}
-//		System.out.println("------------------------->"+properties.getProperty("wikiUrl"));
-//		//startup.navigateToPage(properties.getProperty("wikiUrl"), driver);
-//		
-//	}
+
 	
 	@AfterClass(alwaysRun = true)
 	public void tearDown()  throws IOException, InterruptedException
