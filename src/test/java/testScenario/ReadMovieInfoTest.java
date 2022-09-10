@@ -12,19 +12,10 @@ import java.util.Properties;
 
 import org.assertj.core.api.SoftAssertions;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.AfterClass;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.Test;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import launchBrowser.browserFactory;
 import pages.ImdbPage;
 import pages.WikiPage;
 
@@ -39,30 +30,39 @@ public class ReadMovieInfoTest {
 	WikiPage wikiPage;
 	MovieHelper helper;
 	StartUpHelper startup;
+	
+	WebDriverUtils webDriverUtils  = new WebDriverUtils();
 
+	/**
+	 * This is used to initialize the chrome browser and to open imdb page
+	 */
 	@BeforeClass(alwaysRun = true)
-	@Parameters({"runParallel","enviroment","browser","hubURL"})
-	public void setUp(String runParallel,String enviroment, String browser, String hubURL) 
+	@Parameters({"enviroment","browser"})
+	public void setUp(String enviroment, String browser) 
 			throws Exception
 	{
-	
-		WebDriverUtils webDriverUtils  = new WebDriverUtils();
+		
 		properties = webDriverUtils.loadPropertyFile(enviroment);
 				
-		driver = webDriverUtils.startBrowser("Chrome", properties.getProperty("imdbUrl"));
+		driver = webDriverUtils.startBrowser(browser, properties.getProperty("imdbUrl"));
 	
 		helper = new MovieHelper(driver);
 
 	}
+	
 
-	@Test(description = "Movie Information", groups = {"Smoke"}, testName = "TC-1.1", priority=1)
+	/**
+	 * This is used to verify release date and county of the movie
+	 */
+	@Test(description = "Movie Information", groups = {"Smoke"}, testName = "TC-1.1", enabled=false)
 	public void imdbMovie() throws Exception, ParseException {
 		try {
 			softAssertions = new SoftAssertions();
 			
 			helper.imdbSearchMovie(properties.getProperty("movieName"));
 			
-			driver.get(properties.getProperty("wikiUrl"));
+			webDriverUtils.navigate(properties.getProperty("wikiUrl"));
+			
 			helper.wikiSearchMovie(properties.getProperty("movieName"));
 			
 			softAssertions.assertThat(helper.countryComparision());
@@ -72,13 +72,31 @@ public class ReadMovieInfoTest {
 			softAssertions.assertAll();
 			
 		}catch(Exception e) {
-			System.out.println(e.getMessage());
+			System.out.println("Exception caught:"+e.getMessage());
 		}
 
 	}
 	
-
+	@Test(description = "Movie Information", groups = {"Smoke"})
+	public void findElement() throws Exception
+	{
+		try {
+			softAssertions = new SoftAssertions();
+			String id= "search";
+//			Boolean value =	helper.getElement(id);
+			softAssertions.assertThat(helper.getElement(id));
+			
+			softAssertions.assertAll();
+		
+		}catch(Exception e) {
+			System.out.println("Exception  "+e.getMessage());
+		}
+	}
 	
+
+	/**
+	 * It is used for Quit the Browser
+	 */
 	@AfterClass(alwaysRun = true)
 	public void tearDown()  throws IOException, InterruptedException
 	{

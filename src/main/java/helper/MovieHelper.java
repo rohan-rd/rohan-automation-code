@@ -42,7 +42,7 @@ public class MovieHelper {
 	public void imdbSearchMovie(String movieName) throws Exception {
 		
 		imdbPage.searchField(movieName);
-		imdbPage.clickMovie();
+		imdbPage.clickMovie(movieName);
 		String year = imdbPage.getReleaseDate();
 	    imdbDate = wikiPage.getDate(year);
 
@@ -88,4 +88,11 @@ public class MovieHelper {
 		}
 		return flag;
 	}
+	
+	public Boolean getElement(String idName) {
+		
+	Boolean val =	imdbPage.findElement(idName);
+		return val;
+	}
+	
 }

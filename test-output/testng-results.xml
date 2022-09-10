@@ -1,88 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
-    <line>
-      <![CDATA[------------->December 17, 2021 (India)]]>
-    </line>
-    <line>
-      <![CDATA[------->India]]>
-    </line>
-    <line>
-      <![CDATA[wiki------------------->17 December 2021]]>
-    </line>
-    <line>
-      <![CDATA[wiki---------->India]]>
-    </line>
-    <line>
-      <![CDATA[both string are equals]]>
-    </line>
-    <line>
-      <![CDATA[both string are equals]]>
-    </line>
-    <line>
-      <![CDATA[both string are equals]]>
-    </line>
   </reporter-output>
-  <suite started-at="2022-08-29T20:55:19 IST" name="SuiteTest_Suite" finished-at="2022-08-29T20:57:12 IST" duration-ms="112737">
+  <suite name="SuiteTest_Suite" duration-ms="12909" started-at="2022-09-08T19:57:58 IST" finished-at="2022-09-08T19:58:11 IST">
     <groups>
       <group name="Smoke">
-        <method signature="ReadMovieInfoTest.imdbMovie()[pri:1, instance:testScenario.ReadMovieInfoTest@4386f16]" name="imdbMovie" class="testScenario.ReadMovieInfoTest"/>
+        <method signature="ReadMovieInfoTest.findElement()[pri:0, instance:testScenario.ReadMovieInfoTest@5bfbf16f]" name="findElement" class="testScenario.ReadMovieInfoTest"/>
       </group> <!-- Smoke -->
     </groups>
-    <test started-at="2022-08-29T20:55:19 IST" name="Test" finished-at="2022-08-29T20:57:12 IST" duration-ms="112737">
+    <test name="Test" duration-ms="12909" started-at="2022-09-08T19:57:58 IST" finished-at="2022-09-08T19:58:11 IST">
       <class name="testScenario.ReadMovieInfoTest">
-        <test-method is-config="true" signature="setUp(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:testScenario.ReadMovieInfoTest@4386f16]" started-at="2022-08-29T20:55:19 IST" name="setUp" finished-at="2022-08-29T20:55:58 IST" duration-ms="39220" status="PASS">
+        <test-method status="PASS" signature="setUp(java.lang.String, java.lang.String)[pri:0, instance:testScenario.ReadMovieInfoTest@5bfbf16f]" name="setUp" is-config="true" duration-ms="11151" started-at="2022-09-08T19:57:58 IST" finished-at="2022-09-08T19:58:09 IST">
           <params>
             <param index="0">
-              <value>
-                <![CDATA[true]]>
-              </value>
-            </param>
-            <param index="1">
               <value>
                 <![CDATA[config.properties]]>
               </value>
             </param>
-            <param index="2">
+            <param index="1">
               <value>
                 <![CDATA[Chrome]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="imdbMovie()[pri:1, instance:testScenario.ReadMovieInfoTest@4386f16]" started-at="2022-08-29T20:55:59 IST" name="imdbMovie" description="Movie Information" finished-at="2022-08-29T20:57:10 IST" duration-ms="71471" status="PASS">
+        <test-method status="PASS" signature="findElement()[pri:0, instance:testScenario.ReadMovieInfoTest@5bfbf16f]" name="findElement" duration-ms="772" started-at="2022-09-08T19:58:09 IST" description="Movie Information" finished-at="2022-09-08T19:58:10 IST">
           <reporter-output>
-            <line>
-              <![CDATA[------------->December 17, 2021 (India)]]>
-            </line>
-            <line>
-              <![CDATA[------->India]]>
-            </line>
-            <line>
-              <![CDATA[wiki------------------->17 December 2021]]>
-            </line>
-            <line>
-              <![CDATA[wiki---------->India]]>
-            </line>
-            <line>
-              <![CDATA[both string are equals]]>
-            </line>
-            <line>
-              <![CDATA[both string are equals]]>
-            </line>
-            <line>
-              <![CDATA[both string are equals]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- imdbMovie -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testScenario.ReadMovieInfoTest@4386f16]" started-at="2022-08-29T20:57:10 IST" name="tearDown" finished-at="2022-08-29T20:57:12 IST" duration-ms="1501" status="PASS">
+        </test-method> <!-- findElement -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testScenario.ReadMovieInfoTest@5bfbf16f]" name="tearDown" is-config="true" duration-ms="941" started-at="2022-09-08T19:58:10 IST" finished-at="2022-09-08T19:58:11 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

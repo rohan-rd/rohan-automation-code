@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" verbose="2" name="Failed suite [SuiteTest_Suite]" parallel="classes">
+  <parameter name="enviroment" value="config.properties"/>
+  <parameter name="browser" value="Chrome"/>
+  <listeners>
+    <listener class-name="extentreport.ExtentReporterNG"/>
+  </listeners>
+  <test thread-count="1" verbose="2" name="Test(failed)" parallel="classes">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="testScenario.ReadMovieInfoTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="imdbMovie"/>
+        </methods>
+      </class> <!-- testScenario.ReadMovieInfoTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [SuiteTest_Suite] -->

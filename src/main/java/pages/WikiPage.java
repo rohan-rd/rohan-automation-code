@@ -1,9 +1,5 @@
 package pages;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -24,9 +20,6 @@ public class WikiPage extends CommonUtils{
 	@FindBy(id = "searchInput")
 	WebElement searchBox;
 
-	@FindBy(xpath = "//div[text()='Pushpa: The Rise - Part 1']")
-	WebElement movieLink;
-
 	@FindBy(xpath = "//*[@type='submit']")
 	WebElement searchSubmit;
 
@@ -36,26 +29,34 @@ public class WikiPage extends CommonUtils{
 	@FindBy(xpath = "//*[text()='Country']/../td")
 	WebElement originCountry;
 
+	/*
+	 * This method is used to search for movie name
+	 */
 	public void searchMovieName(String movieName) {
 		searchBox.click();
 		searchBox.sendKeys(movieName);
 		searchSubmit.click();
 	}
 
+	/*
+	 * This method is used to get the Release date of Movie
+	 */
 	public String getReleaseDate() {
-		String date = null;
 		
-			date = releaseDate.getText();
-			Reporter.log("wiki------------------->" + date);
+		String date = null;
+		date = releaseDate.getText();
+		Reporter.log("wiki------------------->" + date);
 		return date;
 
 	}
 
-
+	/*
+	 * This method is used to get the Country name of movie
+	 */
 	public String getCountry() {
 		
-			String country = originCountry.getText();
-			Reporter.log("wiki---------->" + country);
+		String country = originCountry.getText();
+		Reporter.log("wiki---------->" + country);
 		return country;
 	}
 

@@ -24,22 +24,22 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
-      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
+      <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
-          <img src="collapseall.gif" class="collapse-all-icon">
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-SuiteTest_Suite" class="navigator-link">
+            <a href="#" class="navigator-link" panel-name="suite-SuiteTest_Suite">
               <span class="suite-name border-passed">SuiteTest_Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
@@ -50,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-SuiteTest_Suite" class="navigator-link ">
-                    <span>testng.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-SuiteTest_Suite">
+                    <span>C:\Users\ROHAN\Documents\GitHub\rohan-automation-code\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-SuiteTest_Suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="testlist-SuiteTest_Suite">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-SuiteTest_Suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="group-SuiteTest_Suite">
                     <span>1 group</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-SuiteTest_Suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="times-SuiteTest_Suite">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-SuiteTest_Suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="reporter-SuiteTest_Suite">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-SuiteTest_Suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-SuiteTest_Suite">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-SuiteTest_Suite" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="chronological-SuiteTest_Suite">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -103,8 +103,8 @@
                     </span>
                     <div class="method-list-content passed suite-SuiteTest_Suite">
                       <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-SuiteTest_Suite" title="testScenario.ReadMovieInfoTest" class="method navigator-link" hash-for-method="imdbMovie">imdbMovie</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-SuiteTest_Suite" title="testScenario.ReadMovieInfoTest" hash-for-method="findElement">findElement</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-SuiteTest_Suite -->
@@ -127,9 +127,9 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="imdbMovie">
-                  </a> <!-- imdbMovie -->
-                  <span class="method-name">imdbMovie</span>
+                  <a name="findElement">
+                  </a> <!-- findElement -->
+                  <span class="method-name">findElement</span>
                   <em>
 (Movie Information)                  </em>
                 </div> <!-- method-content -->
@@ -139,21 +139,19 @@
         </div> <!-- panel SuiteTest_Suite -->
         <div panel-name="test-xml-SuiteTest_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/home/aavishk/eclipse-workspace/MovieInfo/testng.xml</span>
+            <span class="header-content">C:\Users\ROHAN\Documents\GitHub\rohan-automation-code\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite thread-count=&quot;1&quot; parallel=&quot;classes&quot; name=&quot;SuiteTest_Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;2&quot;&gt;
+&lt;suite thread-count=&quot;1&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;2&quot; name=&quot;SuiteTest_Suite&quot; parallel=&quot;classes&quot;&gt;
   &lt;parameter name=&quot;enviroment&quot; value=&quot;config.properties&quot;/&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;Chrome&quot;/&gt;
-  &lt;parameter name=&quot;hubURL&quot; value=&quot;http://localhost:4444/wd/hub&quot;/&gt;
-  &lt;parameter name=&quot;runParallel&quot; value=&quot;true&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;extentreport.ExtentReporterNG&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;1&quot; parallel=&quot;classes&quot; name=&quot;Test&quot; verbose=&quot;2&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; verbose=&quot;2&quot; name=&quot;Test&quot; parallel=&quot;classes&quot;&gt;
     &lt;groups&gt;
       &lt;run&gt;
         &lt;include name=&quot;Smoke&quot;/&gt;
@@ -188,7 +186,7 @@
               <span class="test-group-name">Smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">imdbMovie</span>
+                <span class="method-in-group-name">findElement</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -210,14 +208,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'imdbMovie')
+data.setCell(0, 1, 'findElement')
 data.setCell(0, 2, 'testScenario.ReadMovieInfoTest')
-data.setCell(0, 3, 71471);
+data.setCell(0, 3, 772);
 window.suiteTableData['SuiteTest_Suite']= { tableData: data, tableDiv: 'times-div-SuiteTest_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 1 minutes</span>
+              <span class="suite-total-time">Total running time: 772 ms</span>
               <div id="times-div-SuiteTest_Suite">
               </div> <!-- times-div-SuiteTest_Suite -->
             </div> <!-- times-div -->
@@ -228,25 +226,20 @@ return data;
             <span class="header-content">Reporter output for SuiteTest_Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">imdbMovie</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">------------->December 17, 2021 (India)</span>
-                <span class="reporter-method-output">------->India</span>
-                <span class="reporter-method-output">wiki------------------->17 December 2021</span>
-                <span class="reporter-method-output">wiki---------->India</span>
-                <span class="reporter-method-output">both string are equals</span>
-                <span class="reporter-method-output">both string are equals</span>
-                <span class="reporter-method-output">both string are equals</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-SuiteTest_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">1 ignored method</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testScenario.ReadMovieInfoTest</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">imdbMovie</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-SuiteTest_Suite" class="panel">
@@ -257,16 +250,16 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">testScenario.ReadMovieInfoTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">setUp(true, config.properties, Chrome, http://localhost:4444/wd/hub)</span>
+                <span class="method-name">setUp(config.properties, Chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">imdbMovie</span>
-                <span class="method-start">39490 ms</span>
+                <span class="method-name">findElement</span>
+                <span class="method-start">11159 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">111079 ms</span>
+                <span class="method-start">11943 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
